@@ -23,18 +23,6 @@ use jojoe77777\FormAPI\CustomForm;
 
 class Main extends PluginBase implements Listener{
 
-    public function onEnable(){
-        $this->getLogger()->info(C::GREEN . "[Enabled] Plugin CalculatorUI By NaufalBlaze");
-    }
-
-    public function onLoad(){
-        $this->getLogger()->info(C::YELLOW . "[Loading] Plugin Sedang Loading");
-    }
-
-    public function onDisable(){
-        $this->getLogger()->info(C::RED . "[Disable] Plugin Terdapat Error / Butuh FormAPI");
-    }
-
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool {
         switch($cmd->getName()){                    
             case "cal":
@@ -43,12 +31,12 @@ class Main extends PluginBase implements Listener{
                         $this->CalculatorUI($sender);
                         return true;
                     }else{
-                        $sender->sendMessage("§cKamu Tidak Mempunyai Permissions");
+                        $sender->sendMessage("§cYou Don't Have Permissions");
                         return true;
                     }
 
                 }else{
-                    $sender->sendMessage("§cGunakan Command Dalam Game!");
+                    $sender->sendMessage("§cUse Command Ingame!");
                     return true;
                 } 
         }
@@ -65,22 +53,22 @@ class Main extends PluginBase implements Listener{
                 case 0:
                 break;
                 case 1:
-                    $this->Tambah($sender);
+                    $this->Add($sender);
                 break;
                 case 2:
-                    $this->Kurang($sender);
+                    $this->Sub($sender);
                 break;
                 case 3:
-                    $this->Kalian($sender);
+                    $this->Multiply($sender);
                 break;
                 case 4:
-                    $this->Bagian($sender);
+                    $this->Divide($sender);
                 break;
 
                 }
             });
             $form->setTitle("§e§lCalculatorUI");
-            $form->setContent("§bUntuk Membantu Kalian Dalam Matematika");
+            $form->setContent("§bUntuk Membantu Multiply Dalam Matematika");
             $form->addButton("§cKeluar\n§fTap To Close");
             $form->addButton("§bAdd §f(§a+§f)\n§fTap To Open");
             $form->addButton("§bSub §f(§a-§f)\n§fTap To Open");
@@ -90,71 +78,71 @@ class Main extends PluginBase implements Listener{
             return $form;
     }
 
-    public function Tambah($sender){ 
+    public function Add($sender){ 
         $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
 	    $form = $api->createCustomForm(function (Player $sender, $data){
                     if($data !== null){
-				       $angka1 = (int)$data[1];
-                       $angka2 = (int)$data[2];
-                       $hasil = $angka1 + $angka2;
-                       $sender->sendMessage("§aHasilnya Adalah§f: §b$hasil");
+				       $numbers1 = (int)$data[1];
+                       $numbers2 = (int)$data[2];
+                       $result = $numbers1 + $numbers2;
+                       $sender->sendMessage("§aResult§f: §b$result");
 				    }
 				});
 				$form->setTitle("§b§lAdd §f(§a+§f)");
-				$form->addLabel("§eSilakan Tulis Angka Pertama Di Sini:");
-				$form->addInput("§bMasukan Angka Pertama Di Sini:", "§f1");
-				$form->addInput("§bMasukan Angka Kedua Di Sini:", "§f1");
+				$form->addLabel("§ePlease Write The First Number Here:");
+				$form->addInput("§bEnter The First Number Here:", "§f1");
+				$form->addInput("§bEnter The Second Number Here:", "§f1");
 				$form->sendToPlayer($sender);
     }
 
-    public function Kurang($sender){ 
+    public function Sub($sender){ 
         $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
 	    $form = $api->createCustomForm(function (Player $sender, $data){
                     if($data !== null){
-				       $angka1 = (int)$data[1];
-                       $angka2 = (int)$data[2];
-                       $hasil = $angka1 - $angka2;
-                       $sender->sendMessage("§aHasilnya Adalah§f: §b$hasil");
+				       $numbers1 = (int)$data[1];
+                       $numbers2 = (int)$data[2];
+                       $result = $numbers1 - $numbers2;
+                       $sender->sendMessage("§aResult§f: §b$result");
 				    }
 				});
 				$form->setTitle("§b§lSub §f(§a-§f)");
-				$form->addLabel("§eSilakan Tulis Angka Pertama Di Sini:");
-				$form->addInput("§bMasukan Angka Pertama Di Sini:", "§f1");
-				$form->addInput("§bMasukan Angka Kedua Di Sini:", "§f1");
+				$form->addLabel("§ePlease Write The First Number Here:");
+				$form->addInput("§bEnter The First Number Here:", "§f1");
+				$form->addInput("§bEnter The Second Number Here:", "§f1");
 				$form->sendToPlayer($sender);
     }
 
-    public function Kalian($sender){ 
+    public function Multiply($sender){ 
         $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
 	    $form = $api->createCustomForm(function (Player $sender, $data){
                     if($data !== null){
-				       $angka1 = (int)$data[1];
-                       $angka2 = (int)$data[2];
-                       $hasil = $angka1 * $angka2;
-                       $sender->sendMessage("§aHasilnya Adalah§f: §b$hasil");
+				       $numbers1 = (int)$data[1];
+                       $numbers2 = (int)$data[2];
+                       $result = $numbers1 * $numbers2;
+                       $sender->sendMessage("§aResult§f: §b$result");
 				    }
 				});
 				$form->setTitle("§b§lMultiply §f(§a*§f)");
-				$form->addLabel("§eSilakan Tulis Angka Pertama Di Sini:");
-				$form->addInput("§bMasukan Angka Pertama Di Sini:", "§f1");
-				$form->addInput("§bMasukan Angka Kedua Di Sini:", "§f1");
+				$form->addLabel("§ePlease Write The First Number Here:");
+				$form->addInput("§bEnter The First Number Here:", "§f1");
+				$form->addInput("§bEnter The Second Number Here:", "§f1");
 				$form->sendToPlayer($sender);
     }
 
-    public function Bagian($sender){ 
+    public function Divide($sender){ 
         $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
 	    $form = $api->createCustomForm(function (Player $sender, $data){
                     if($data !== null){
-				       $angka1 = (int)$data[1];
-                       $angka2 = (int)$data[2];
-                       $hasil = $angka1 / $angka2;
-                       $sender->sendMessage("§aHasilnya Adalah§f: §b$hasil");
+				       $numbers1 = (int)$data[1];
+                       $numbers2 = (int)$data[2];
+                       $result = $numbers1 / $numbers2;
+                       $sender->sendMessage("§aResult§f: §b$result");
 				    }
 				});
 				$form->setTitle("§b§lDevide §f(§a/§f)");
-				$form->addLabel("§eSilakan Tulis Angka Pertama Di Sini:");
-				$form->addInput("§bMasukan Angka Pertama Di Sini:", "§f1");
-				$form->addInput("§bMasukan Angka Kedua Di Sini:", "§f1");
+				$form->addLabel("§ePlease Write The First Number Here:");
+				$form->addInput("§bEnter The First Number Here:", "§f1");
+				$form->addInput("§bEnter The Second Number Here:", "§f1");
 				$form->sendToPlayer($sender);
     }
 }
