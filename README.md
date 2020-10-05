@@ -10,3 +10,5 @@ Permissions
 
 Donate Me
 [Click Here](https://trakteer.id/NaufalCream)
+
+[![](https://poggit.pmmp.io/shield.state/Calculator)](https://poggit.pmmp.io/p/Calculator)
