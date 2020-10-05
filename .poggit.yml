@@ -4,6 +4,6 @@ branches:
 - master
 projects:
   CalculatorUI:
-    icon: logo/calculator.png
+    icon: logo.png
     path: ""
 ...
