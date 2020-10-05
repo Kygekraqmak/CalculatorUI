@@ -1,7 +1,20 @@
-# CalculatorUI
-[![](https://poggit.pmmp.io/shield.state/Calculator)](https://poggit.pmmp.io/p/Calculator)
+# General
+
+This Plugin For Learning Math | CalculatorUI
+
+# Description
 
 Calculator in Minecraft, implement with UI, This Plugin For Learning Math!
+
+[![](https://poggit.pmmp.io/shield.state/CalculatorUI)](https://poggit.pmmp.io/p/CalculatorUI)
+
+[![](https://poggit.pmmp.io/shield.api/CalculatorUI)](https://poggit.pmmp.io/p/CalculatorUI)
+
+# Feature
+- [x] Add
+- [x] Sub
+- [x] Multiply
+- [x] Divide
 
 # How to Install
 
