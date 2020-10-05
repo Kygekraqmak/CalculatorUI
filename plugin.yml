@@ -1,7 +1,7 @@
-name: CalculatorUI_By_NaufalBlaze
+name: CalculatorUI
 main: NaufalBlazeYT\CalculatorUI\Main
-api: [3.0.0, 4.0.0]
-version: 1.0
+api: 3.0.0
+version: 1.0.0-beta
 author: NaufalBlazeYT
 
 commands:
