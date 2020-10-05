@@ -68,8 +68,8 @@ class Main extends PluginBase implements Listener{
                 }
             });
             $form->setTitle("§e§lCalculatorUI");
-            $form->setContent("§bUntuk Membantu Multiply Dalam Matematika");
-            $form->addButton("§cKeluar\n§fTap To Close");
+            $form->setContent("§bTo Help Multiply In Math");
+            $form->addButton("§cExit\n§fTap To Close");
             $form->addButton("§bAdd §f(§a+§f)\n§fTap To Open");
             $form->addButton("§bSub §f(§a-§f)\n§fTap To Open");
             $form->addButton("§bMultiply §f(§a*§f)\n§fTap To Open");
