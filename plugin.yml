@@ -1,0 +1,16 @@
+name: CalulatorUI_By_NaufalBlaze
+main: NaufalBlazeYT\CalculatorUI\Main
+api: [3.0.0, 4.0.0]
+version: 1.0
+author: NaufalBlazeYT
+
+commands:
+  cal:
+   description: "CalculatorUI Commands"
+   permission: calculatorui.command
+   usage: /cal
+
+permissions:
+  calculatorui.command:
+    default: op
+    description: "CalculatorUI Commands"
