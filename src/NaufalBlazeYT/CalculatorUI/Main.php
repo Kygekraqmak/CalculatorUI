@@ -31,14 +31,13 @@ class Main extends PluginBase implements Listener{
                         $this->CalculatorUI($sender);
                         return true;
                     }else{
-                        $sender->sendMessage("§cYou Don't Have Permissions");
                         return true;
+                        $sender->sendMessage("§cYou Don't Have Permissions");
                     }
                     }else{
                         $sender->sendMessage("§cUse Command Ingame!");
                         return true;
                     } 
-                    break;
            }
     } 
 
