@@ -34,13 +34,13 @@ class Main extends PluginBase implements Listener{
                         $sender->sendMessage("§cYou Don't Have Permissions");
                         return true;
                     }
-
-                }else{
-                    $sender->sendMessage("§cUse Command Ingame!");
-                    return true;
-                } 
-        }
-    }
+                    }else{
+                        $sender->sendMessage("§cUse Command Ingame!");
+                        return true;
+                    } 
+                    break;
+           }
+    } 
 
     public function CalculatorUI($sender){ 
         $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
