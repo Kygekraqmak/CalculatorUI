@@ -17,7 +17,7 @@ use pocketmine\command\CommandExecutor;
 use pocketmine\command\ConsoleCommandSender;
 
 use pocketmine\utils\Config;
-use jojoe77777\FormAPI;
+
 use jojoe77777\FormAPI\SimpleForm;
 use jojoe77777\FormAPI\CustomForm;
 
@@ -42,8 +42,7 @@ class Main extends PluginBase implements Listener{
     } 
 
     public function CalculatorUI($sender){ 
-        $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
-        $form = $api->createSimpleForm(function (Player $sender, int $data = null) {
+            $form = new SimpleForm(function (Player $sender, int $data = null) {
             $result = $data;
             if($result === null){
                 return true;
@@ -78,8 +77,7 @@ class Main extends PluginBase implements Listener{
     }
 
     public function Add($sender){ 
-        $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
-	    $form = $api->createCustomForm(function (Player $sender, $data){
+	    $form = new CustomForm(function (Player $sender, $data) {
                     if($data !== null){
 				       $numbers1 = (int)$data[1];
                        $numbers2 = (int)$data[2];
@@ -95,8 +93,7 @@ class Main extends PluginBase implements Listener{
     }
 
     public function Sub($sender){ 
-        $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
-	    $form = $api->createCustomForm(function (Player $sender, $data){
+	    $form = new CustomForm(function (Player $sender, $data) {
                     if($data !== null){
 				       $numbers1 = (int)$data[1];
                        $numbers2 = (int)$data[2];
@@ -112,8 +109,7 @@ class Main extends PluginBase implements Listener{
     }
 
     public function Multiply($sender){ 
-        $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
-	    $form = $api->createCustomForm(function (Player $sender, $data){
+	    $form = new CustomForm(function (Player $sender, $data) {
                     if($data !== null){
 				       $numbers1 = (int)$data[1];
                        $numbers2 = (int)$data[2];
@@ -129,8 +125,7 @@ class Main extends PluginBase implements Listener{
     }
 
     public function Divide($sender){ 
-        $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
-	    $form = $api->createCustomForm(function (Player $sender, $data){
+	    $form = new CustomForm(function (Player $sender, $data) {
                     if($data !== null){
 				       $numbers1 = (int)$data[1];
                        $numbers2 = (int)$data[2];
