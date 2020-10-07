@@ -31,4 +31,3 @@ Calculator in Minecraft, implement with UI, This Plugin For Learning Math!
 
 # Additional Notes
 - If You See A Bug, [Click Here](https://github.com/NaufalBlaze/CalculatorUI/issues), Or DM My Naufal Blaze#8142 Via Discord
-- Use Plugins FormAPI, Download Plugin [Click Here](https://poggit.pmmp.io/r/41263/FormAPI.phar)
